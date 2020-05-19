@@ -6,6 +6,10 @@
     color: $color-white-transparent;
     margin-top: 5rem;
 
+    @include responsive(tab-land) {
+        flex-wrap: wrap;
+    }
+
     &__item {
         padding: 2rem;
         display: flex;
@@ -17,6 +21,19 @@
         cursor: pointer;
         transition: all .2s;
 
+        @include responsive(tab-land) {
+            margin: 2rem;
+        }
+
+        @include responsive(phone-xl) {
+            flex-basis: 75% !important;
+            height: 100%;
+        }
+
+        @include responsive(big-desktop) {
+            margin: 1rem;
+        }
+
         &:hover {
             transform: translateY(.5rem) scale(1.1);
             color: $color-white;
@@ -24,18 +41,34 @@
 
         &--1 {
             background-color: $color-accent;
+
+            @include responsive(tab-land) {
+                flex-basis: 45%;
+            }
         }
 
         &--2 {
             background-color: $color-secondary-light;
+
+            @include responsive(tab-land) {
+                flex-basis: 45%;
+            }
         }
 
         &--3 {
             background-color: $color-secondary;
+
+            @include responsive(tab-land) {
+                flex-basis: 45%;
+            }
         }
 
         &--4 {
             background-color: $color-primary-light;
+
+            @include responsive(tab-land) {
+                flex-basis: 45%;
+            }
         }
     }
 
@@ -45,11 +78,19 @@
         justify-content: flex-start;
         height: 100%;
         margin-top: 3rem;
+
+        @include responsive(phone-md) {
+            margin-top: 1rem;
+        }
     }
 
     &__icon {
         font-size: 10rem;
         margin-right: 3rem;
+
+        @include responsive(phone-md) {
+            font-size: 8rem;
+        }
     }
 
     &__header {

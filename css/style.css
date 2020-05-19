@@ -5,19 +5,23 @@
   padding: 0;
   box-sizing: inherit; }
 
+::selection {
+  color: black;
+  background-color: #fff; }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
-  @media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 1415px) {
     html {
       font-size: 56,25%; } }
   @media only screen and (max-width: 900px) {
     html {
       font-size: 50%; } }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 640px) {
     html {
       font-size: 43,75%; } }
-  @media only screen and (max-width: 1800px) {
+  @media only screen and (min-width: 1800px) {
     html {
       font-size: 75%; } }
 
@@ -35,6 +39,9 @@ body {
   font-size: 2rem;
   color: rgba(255, 255, 255, 0.8);
   margin-top: 5rem; }
+  @media only screen and (max-width: 1415px) {
+    .card {
+      flex-wrap: wrap; } }
   .card__item {
     padding: 2rem;
     display: flex;
@@ -45,26 +52,54 @@ body {
     border-radius: 0.5rem;
     cursor: pointer;
     transition: all .2s; }
+    @media only screen and (max-width: 1415px) {
+      .card__item {
+        margin: 2rem; } }
+    @media only screen and (max-width: 640px) {
+      .card__item {
+        flex-basis: 75% !important;
+        height: 100%; } }
+    @media only screen and (min-width: 1800px) {
+      .card__item {
+        margin: 1rem; } }
     .card__item:hover {
       transform: translateY(0.5rem) scale(1.1);
       color: #fff; }
     .card__item--1 {
       background-color: #414a4c; }
+      @media only screen and (max-width: 1415px) {
+        .card__item--1 {
+          flex-basis: 45%; } }
     .card__item--2 {
       background-color: #3b444b; }
+      @media only screen and (max-width: 1415px) {
+        .card__item--2 {
+          flex-basis: 45%; } }
     .card__item--3 {
       background-color: #353839; }
+      @media only screen and (max-width: 1415px) {
+        .card__item--3 {
+          flex-basis: 45%; } }
     .card__item--4 {
       background-color: #232b2b; }
+      @media only screen and (max-width: 1415px) {
+        .card__item--4 {
+          flex-basis: 45%; } }
   .card__description {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
     margin-top: 3rem; }
+    @media only screen and (max-width: 415px) {
+      .card__description {
+        margin-top: 1rem; } }
   .card__icon {
     font-size: 10rem;
     margin-right: 3rem; }
+    @media only screen and (max-width: 415px) {
+      .card__icon {
+        font-size: 8rem; } }
   .card__header {
     display: block;
     width: 100%;
@@ -76,21 +111,37 @@ body {
   background-image: linear-gradient(to right bottom, rgba(14, 17, 17, 0.8), rgba(53, 56, 57, 0.8)), url(../images/guitarist.jpg);
   background-size: cover;
   border-bottom: 1px solid rgba(255, 255, 255, 0.8); }
+  @media only screen and (max-width: 900px) {
+    .header {
+      height: 70rem; } }
   .header__image {
     width: 15rem;
     height: 15rem;
     margin-top: 3rem;
     margin-left: 3rem;
     cursor: pointer; }
+    @media only screen and (max-width: 415px) {
+      .header__image {
+        width: 13rem;
+        height: 13rem; } }
   .header__label {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center; }
   .header__welcome {
     color: #fff;
     font-size: 7rem;
     display: block;
     margin-bottom: 10rem; }
+    @media only screen and (max-width: 415px) {
+      .header__welcome {
+        font-size: 5rem; } }
+    @media only screen and (max-width: 640px) {
+      .header__welcome {
+        font-size: 6rem; } }
   .header__button-enter {
     font-family: Lato, sans-serif;
     border: none;
@@ -215,6 +266,9 @@ body {
   display: flex;
   justify-content: center;
   margin: 10rem 0; }
+  @media only screen and (max-width: 900px) {
+    .products {
+      padding: 0 1rem; } }
   .products__container {
     width: 75%;
     height: 100%;
@@ -223,6 +277,9 @@ body {
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(12, 1fr);
     border: 0.3rem solid rgba(255, 255, 255, 0.8); }
+    @media only screen and (max-width: 900px) {
+      .products__container {
+        width: 100%; } }
   .products__image {
     width: 100%;
     height: 100%;

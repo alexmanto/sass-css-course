@@ -8,18 +8,30 @@
     background-size: cover;
     border-bottom: 1px solid $color-white-transparent;
 
+    @include responsive(tab-port) {
+        height: 70rem;
+    }
+
     &__image {
         width: 15rem;
         height: 15rem;
         margin-top: 3rem;
         margin-left: 3rem;
         cursor: pointer;
+
+        @include responsive(phone-md) {
+            width: 13rem;
+            height: 13rem;
+        }
     }
 
     &__label {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
     }
 
     &__welcome {
@@ -27,6 +39,14 @@
         font-size: 7rem;
         display: block;
         margin-bottom: 10rem;
+
+        @include responsive(phone-md) {
+            font-size: 5rem;
+        }
+
+        @include responsive(phone-xl) {
+            font-size: 6rem;
+        }
     }
 
     &__button-enter {
