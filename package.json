@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/alexmanto/sass-css-course#readme",
   "dependencies": {
-    "node-sass": "^4.14.1"
+    "node-sass": "^7.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
